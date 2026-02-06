@@ -1,7 +1,7 @@
 ## This command disables User Account Control to run the script without user interaction, it is enabled at the end of the script.
 ## To avoid security concerns you can comment it if you prefer, otherwise please check the software you install is safe and use this command at your own risk.
 Disable-UAC
-Set-ExecutionPolicy Unrestricted -Force
+Set-ExecutionPolicy -Policy Unrestricted -Scope LocalMachine -Force
 $Boxstarter.AutoLogin=$false
 
 #--- Install git ---
