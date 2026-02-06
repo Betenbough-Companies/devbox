@@ -5,11 +5,11 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope LocalMachine -Force
 $Boxstarter.AutoLogin=$false
 
 #--- Install git ---
-Install-ChocoPackage "git" "/GitOnlyOnPath /NoGuiHereIntegration /WindowsTerminal"
+choco install -y git --params "/GitOnlyOnPath /NoGuiHereIntegration /WindowsTerminal"
 #--- Install GnuPG for signing commits (https://www.gnupg.org/) ---
-Install-ChocoPackage "gnupg"
+choco install -y gnupg
 #--- Install lazygit for git TUI ---
-Install-ChocoPackage "lazygit"
+choco install -y lazygit
 RefreshEnv
 
 #--- Capture some user input for configuring the dotfiles repository ---
