@@ -1,8 +1,13 @@
-## This command disables User Account Control to run the script without user interaction, it is enabled at the end of the script.
-## To avoid security concerns you can comment it if you prefer, otherwise please check the software you install is safe and use this command at your own risk.
-Disable-UAC
+$useBoxstarter = Read-Host "Use Boxstarter? (y/n)"
+if ($useBoxstarter -eq "y") {
+	## This command disables User Account Control to run the script without user interaction, it is enabled at the end of the script.
+	## To avoid security concerns you can comment it if you prefer, otherwise please check the software you install is safe and use this command at your own risk.
+	Disable-UAC
+	
+	$Boxstarter.AutoLogin=$false
+}
+
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope LocalMachine -Force
-$Boxstarter.AutoLogin=$false
 
 #--- Install git ---
 choco install -y git --params "/GitOnlyOnPath /NoGuiHereIntegration /WindowsTerminal"
