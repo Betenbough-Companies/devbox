@@ -1,5 +1,3 @@
-. "scripts/Helpers.ps1"
-
 ## This command disables User Account Control to run the script without user interaction, it is enabled at the end of the script.
 ## To avoid security concerns you can comment it if you prefer, otherwise please check the software you install is safe and use this command at your own risk.
 Disable-UAC
@@ -24,6 +22,7 @@ $dotfilesRepo = "https://github.com/$githubUsername/$repoName.git"
 git clone https://github.com/Betenbough-Companies/devbox "$env:USERPROFILE\devbox"
 git clone $dotfilesRepo "$env:USERPROFILE\dotfiles"
 
+. "$env:USERPROFILE\devbox\scripts\Helpers.ps1"
 . "$env:USERPROFILE\devbox\scripts\InstallWinget.ps1"
 
 #--- Install Windows Terminal Preview version ---
