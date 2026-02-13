@@ -102,7 +102,7 @@ Install-WingetPackage "Microsoft.SQLServer.OLEDBDriver"
 Install-WingetPackage "Microsoft.CLRTypesSQLServer.2019"
 
 Install-DotnetTool "aspirate"
-Install-DotnetTool "dependense"
+Install-DotnetTool "dependensee"
 Install-DotnetTool "dotnet-depends"
 Install-DotnetTool "dotnet-ef"
 Install-DotnetTool "dotnet-tools-outdated"
