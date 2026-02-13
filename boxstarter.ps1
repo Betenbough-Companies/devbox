@@ -11,8 +11,8 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope LocalMachine -Force
 
 #--- Install git ---
 choco install -y git --params "/GitOnlyOnPath /NoGuiHereIntegration /WindowsTerminal"
-#--- Install GnuPG for signing commits (https://www.gnupg.org/) ---
-choco install -y gnupg
+#--- Install GnuPG/Kleopatra for signing commits (https://www.gnupg.org/) ---
+choco install -y gpg4win
 #--- Install lazygit for git TUI ---
 choco install -y lazygit
 RefreshEnv
