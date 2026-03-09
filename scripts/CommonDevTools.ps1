@@ -100,6 +100,7 @@ winget install Microsoft.SQLServerSetup --silent --force -- -ACTION=install -FEA
 Install-WingetPackage "Microsoft.SqlCmd"
 Install-WingetPackage "Microsoft.SQLServer.OLEDBDriver"
 Install-WingetPackage "Microsoft.CLRTypesSQLServer.2019"
+Install-WingetPackage "Microsoft.SqlPackage"
 
 Install-DotnetTool "aspirate"
 Install-DotnetTool "dependensee"
